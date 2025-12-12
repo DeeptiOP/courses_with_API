@@ -1,47 +1,68 @@
-/* Index page styles */
+/* Colorful linear modern design */
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: "Inter", "Segoe UI", Tahoma, sans-serif;
+
+    /* Smooth colorful gradient */
+    background: linear-gradient(135deg, #08023a 0%, #044257 100%);
+
     color: #fff;
     min-height: 100vh;
+
+    /* Linear vertical alignment */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+
+    padding: 20px;
 }
 
+/* Title */
 h1 {
     font-size: 3rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
+/* Subtitle / paragraph */
 p {
     font-size: 1.2rem;
-    margin-bottom: 40px;
-    max-width: 600px;
     line-height: 1.6;
+    max-width: 650px;
+    margin-bottom: 40px;
+    color: #eaf8ff;
 }
 
+/* Buttons / Links */
 a {
     display: block;
-    margin: 15px auto;
-    padding: 12px 24px;
-    background-color: rgba(255, 255, 255, 0.2);
+    width: 240px;
+    padding: 14px 20px;
+    margin: 12px auto;
+
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
+
     text-decoration: none;
-    border-radius: 25px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease;
-    font-weight: 500;
-    max-width: 200px;
+    border-radius: 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(6px);
+
+    transition: all 0.25s ease;
+    font-weight: 600;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background: rgba(255, 255, 255, 0.28);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
 }

@@ -1,40 +1,77 @@
+/* Modern colorful login page */
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    margin: 0;
+    font-family: "Inter", "Segoe UI", Tahoma, sans-serif;
+
+    /* Smooth gradient */
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     height: 100vh;
-    margin: 0;
-}
-form {
-    background-color: white;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    color: #fff;
 }
+
+/* Form container */
+form {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 25px;
+    width: 320px;
+
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    color: #fff;
+}
+
+/* Labels */
 label {
+    font-weight: 600;
+    margin-bottom: 6px;
     display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
 }
+
+/* Inputs */
 input {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 18px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.85);
+    color: #222;
+
+    font-size: 0.95rem;
 }
+
+/* Button */
 button {
     width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
+    padding: 12px;
+
+    background: #ffffff;
+    color: #333;
+
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
+
+    font-size: 1rem;
+    font-weight: 600;
+
     cursor: pointer;
+    transition: all 0.25s ease;
 }
+
 button:hover {
-    background-color: #45a049;
+    background: #f1f1f1;
+    transform: translateY(-2px);
 }

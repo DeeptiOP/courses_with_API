@@ -1,37 +1,75 @@
+/* Modern colorful register page */
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    margin: 0;
+    font-family: "Inter", "Segoe UI", Tahoma, sans-serif;
+
+    /* Smooth gradient */
+    background: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%);
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     height: 100vh;
-    margin: 0;
-}
-form {
-    background-color: white;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    color: #fff;
 }
+
+/* Form container */
+form {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 25px;
+    width: 330px;
+
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    color: #fff;
+}
+
+/* Labels */
 label {
+    font-weight: 600;
+    margin-bottom: 6px;
     display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
 }
+
+/* Inputs */
 input {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
+    padding: 10px;
+    margin-bottom: 18px;
+
     border: none;
-    cursor: pointer;
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.85);
+    color: #222;
+
+    font-size: 0.95rem;
 }
+
+/* Submit button */
+input[type="submit"] {
+    background: #ffffff;
+    color: #333;
+
+    font-weight: 600;
+    font-size: 1rem;
+
+    padding: 12px;
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+    border: none;
+}
+
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background: #f3f3f3;
+    transform: translateY(-2px);
 }

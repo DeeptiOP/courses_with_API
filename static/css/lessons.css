@@ -1,12 +1,15 @@
-/* Lessons page styles */
+/* Lessons page - modern colorful UI */
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
     margin: 0;
     padding: 20px;
     min-height: 100vh;
+    font-family: "Inter", "Segoe UI", Tahoma, sans-serif;
+
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
 }
 
+/* Logout */
 .logout-container {
     position: absolute;
     top: 20px;
@@ -15,100 +18,125 @@ body {
 
 .logout-link {
     padding: 10px 20px;
-    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+    background: rgba(255, 255, 255, 0.25);
     color: white;
-    text-decoration: none;
+
     border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.4);
+
+    text-decoration: none;
     font-weight: 600;
-    font-size: 14px;
-    transition: transform 0.3s, box-shadow 0.3s;
+
+    backdrop-filter: blur(8px);
+    transition: all 0.25s ease;
 }
 
 .logout-link:hover {
+    background: rgba(255,255,255,0.35);
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
 }
 
+/* Page title */
 h2 {
-    color: #333;
+    color: #fff;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
+    font-size: 2.4rem;
     font-weight: 700;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    letter-spacing: 1px;
 }
 
+/* Lesson list */
 ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    max-width: 800px;
+    max-width: 850px;
     margin: 0 auto;
 }
 
+/* Lesson card */
 li {
-    background-color: rgba(255, 255, 255, 0.9);
-    margin: 15px 0;
+    background: rgba(255, 255, 255, 0.18);
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin: 15px 0;
+
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.35);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+
+    transition: all 0.25s ease;
 }
 
 li:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
+/* Completed label */
 .completed {
     color: #4CAF50;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 16px;
 }
 
+/* Buttons */
 button {
-    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-    color: #333;
-    padding: 10px 15px;
+    padding: 10px 16px;
+    border-radius: 8px;
     border: none;
-    border-radius: 6px;
-    font-size: 14px;
+
+    background: white;
+    color: #333;
+
     font-weight: 600;
     cursor: pointer;
-    transition: transform 0.2s;
+
+    transition: all 0.25s ease;
 }
 
 button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(252, 182, 159, 0.3);
+    background: #f1f1f1;
 }
 
+/* Links */
 a {
-    color: #667eea;
-    text-decoration: none;
+    color: #ffffff;
     font-weight: 500;
+    text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+    opacity: 0.8;
 }
 
+/* Bottom links container */
 .links {
     text-align: center;
     margin-top: 30px;
 }
 
+/* Styled link buttons */
 .links a {
-    margin: 0 15px;
-    padding: 10px 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    margin: 0 12px;
+    padding: 12px 24px;
+
+    background: #ffffff;
+    color: #185a9d;
+
     border-radius: 20px;
-    transition: transform 0.3s;
+    font-weight: 600;
+
+    transition: all 0.25s ease;
 }
 
 .links a:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    transform: translateY(-3px);
+    background: #eef1f5;
 }

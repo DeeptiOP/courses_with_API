@@ -1,12 +1,27 @@
-/* My Courses page styles */
+/* My Courses page - fixed layout + modern look */
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
     margin: 0;
-    padding: 20px;
+    padding: 0;
     min-height: 100vh;
+
+    font-family: "Inter", "Segoe UI", Tahoma, sans-serif;
+
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Fix overlap: keep logout inside a header space */
+.header-space {
+    width: 100%;
+    height: 80px; /* space for logout button */
+    position: relative;
+}
+
+/* Logout button */
 .logout-container {
     position: absolute;
     top: 20px;
@@ -15,91 +30,117 @@ body {
 
 .logout-link {
     padding: 10px 20px;
-    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
-    color: white;
-    text-decoration: none;
     border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.4);
+    text-decoration: none;
+
     font-weight: 600;
-    font-size: 14px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    backdrop-filter: blur(8px);
+
+    transition: all 0.25s ease;
 }
 
 .logout-link:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+    background: rgba(255,255,255,0.35);
 }
 
+/* Page title */
 h2 {
-    color: #333;
     text-align: center;
-    margin-bottom: 30px;
+    color: #fff;
+
+    margin: 10px 0 30px;
+    font-size: 2.4rem;
     font-weight: 700;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
+/* Course list */
 ul {
-    list-style-type: none;
     padding: 0;
-    max-width: 800px;
-    margin: 0 auto;
+    list-style: none;
+    width: 90%;
+    max-width: 900px;
+
+    margin-bottom: 40px; /* extra space */
 }
 
+/* Course card */
 li {
-    background-color: rgba(255, 255, 255, 0.9);
-    margin: 15px 0;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 24px;
+
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.5);
+
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+
+    margin-bottom: 20px;
+    transition: all 0.25s ease;
 }
 
 li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
 
+/* Course title */
 li strong {
-    display: block;
-    font-size: 18px;
-    color: #333;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
     margin-bottom: 8px;
 }
 
+/* Description */
 li p {
-    color: #666;
-    margin: 5px 0;
-    font-size: 14px;
+    color: #f0f0f0;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
 }
 
+/* Action buttons */
 a {
-    color: #ff6b6b;
+    padding: 8px 14px;
+    border-radius: 10px;
+
+    background: white;
+    color: #d84c73;
+
     text-decoration: none;
-    margin-right: 15px;
-    font-weight: 500;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+    display: inline-block;
+    margin-right: 12px;
 }
 
 a:hover {
-    background-color: rgba(255, 107, 107, 0.1);
-    color: #d63031;
+    background: #f1f1f1;
 }
 
+/* Back button */
 .back-link {
-    display: block;
-    text-align: center;
-    margin-top: 30px;
-    padding: 15px 30px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    text-decoration: none;
+    padding: 14px 30px;
+
+    background: white;
+    color: #d84c73;
+
     border-radius: 25px;
-    font-weight: 600;
-    transition: transform 0.3s;
+    font-weight: 700;
+
+    text-decoration: none;
+    transition: all 0.25s ease;
+
+    margin-top: 10px;
 }
 
 .back-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    background: #f3f3f3;
+    transform: translateY(-3px);
 }
