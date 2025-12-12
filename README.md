@@ -1,6 +1,6 @@
 ﻿# Course Platform API
 
-A comprehensive Flask-based course management platform with user authentication, course enrollment, lesson tracking, and progress monitoring with better skillls.
+A comprehensive Flask-based course management platform with user authentication, course enrollment, lesson tracking, and progress monitoring.
 
 ## 🚀 Features
 
