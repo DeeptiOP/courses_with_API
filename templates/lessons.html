@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Lessons</title>
+    <link rel="stylesheet" href="/static/css/lessons.css">
+</head>
+<body>
+    <div class="logout-container">
+        <a href="/logout" class="logout-link">Logout</a>
+    </div>
+    <h2>Lessons for Course {{ course_id }}</h2>
+    <ul>
+        {% for lesson in lessons %}
+        <li>
+            <span>{{ lesson[1] }}</span>
+            {% if lesson[0] in completed %}
+                <span class="completed">Completed</span>
+            {% else %}
+                <form action="/courses/{{ course_id }}/lessons/{{ lesson[0] }}/complete" method="POST" style="display:inline;">
+                    <button type="submit">Mark Complete</button>
+                </form>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+    <div class="links">
+        <a href="/courses/{{ course_id }}/progress">View Progress</a> |
+        <a href="/mycourses">Back to My Courses</a>
+    </div>
+</body>
+</html>

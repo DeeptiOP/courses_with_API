@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Detail</title>
+    <link rel="stylesheet" href="/static/css/course_detail.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logout-container">
+            <a href="/logout" class="logout-link">Logout</a>
+        </div>
+        <h2>Course Details</h2>
+        {% if course %}
+        <h3>{{ course[1] }}</h3>
+        <p>{{ course[2] }}</p>
+        <div class="rating-info">
+            <p>Average Rating: {{ "%.1f"|format(avg_rating) }} ({{ total_ratings }} ratings)</p>
+        </div>
+    {% if enrolled %}
+        {% if user_rating %}
+            <p>Your Rating: {{ user_rating[0] }} stars</p>
+            {% if user_rating[1] %}<p>Comment: {{ user_rating[1] }}</p>{% endif %}
+        {% else %}
+            <h4>Rate this course</h4>
+            <form action="/courses/{{ course[0] }}/rating" method="POST">
+                <label>Rating (1-5):</label>
+                <input type="number" name="rating" min="1" max="5" required>
+                <label>Comment (optional):</label>
+                <textarea name="comment"></textarea>
+                <button type="submit">Submit Rating</button>
+            </form>
+        {% endif %}
+    {% else %}
+        <form action="/courses/{{ course[0] }}/enroll" method="POST">
+            <button type="submit" class="enroll-btn">Enroll in this course</button>
+        </form>
+    {% endif %}
+        {% endif %}
+        <a href="/courses" class="back-link">Back to Courses</a>
+    </div>
+</body>
+</html>

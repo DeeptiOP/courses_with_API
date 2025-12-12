@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Courses</title>
+    <link rel="stylesheet" href="/static/css/mycourses.css">
+</head>
+<body>
+    <div class="logout-container">
+        <a href="/logout" class="logout-link">Logout</a>
+    </div>
+    <h2>My Enrolled Courses</h2>
+    <ul>
+        {% for course in courses %}
+        <li>
+            {{ course[1] }} - {{ course[2] }} 
+            <a href="/courses/{{ course[0] }}/lessons">View Lessons</a> | 
+            <a href="/courses/{{ course[0] }}/progress">View Progress</a> |
+            <a href="/courses/{{ course[0] }}">Rate this course</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/courses" class="back-link">Back to All Courses</a>
+</body>
+</html>
